@@ -1,0 +1,229 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local close = Instance.new("TextButton")
+local GUILABEL = Instance.new("TextLabel")
+local LINE = Instance.new("TextLabel")
+local ANIMATION = Instance.new("TextLabel")
+local NINJA = Instance.new("TextButton")
+local HEADLESS = Instance.new("TextLabel")
+local HEADLESSBUTTON = Instance.new("TextButton")
+local SCRIPTS = Instance.new("TextLabel")
+local SAZAHUB = Instance.new("TextButton")
+local BLACKSTRAP = Instance.new("TextButton")
+local RSPY = Instance.new("TextButton")
+local FAKEHATCHER = Instance.new("TextButton")
+local FAKEEQUIP = Instance.new("TextButton")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.Active = true
+Main.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+Main.Position = UDim2.new(0.260057092, 0, 0.22039631, 0)
+Main.Size = UDim2.new(0, 338, 0, 227)
+Main.Active = true
+Main.Draggable = true
+
+close.Name = "close"
+close.Parent = Main
+close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+close.Position = UDim2.new(0.905325472, 0, 0, 0)
+close.Size = UDim2.new(0, 32, 0, 24)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(85, 255, 255)
+close.TextSize = 30.000
+
+GUILABEL.Name = "GUI LABEL"
+GUILABEL.Parent = Main
+GUILABEL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GUILABEL.Size = UDim2.new(0, 306, 0, 24)
+GUILABEL.Font = Enum.Font.SourceSans
+GUILABEL.Text = "Pet Simulator X Fucks By Pio"
+GUILABEL.TextColor3 = Color3.fromRGB(255, 255, 255)
+GUILABEL.TextSize = 14.000
+
+LINE.Name = "LINE"
+LINE.Parent = Main
+LINE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LINE.Position = UDim2.new(0.494082868, 0, 0.105726875, 0)
+LINE.Size = UDim2.new(0, 3, 0, 203)
+LINE.Font = Enum.Font.SourceSans
+LINE.Text = ""
+LINE.TextColor3 = Color3.fromRGB(0, 0, 0)
+LINE.TextSize = 14.000
+
+ANIMATION.Name = "ANIMATION"
+ANIMATION.Parent = Main
+ANIMATION.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ANIMATION.Position = UDim2.new(0, 0, 0.105726875, 0)
+ANIMATION.Size = UDim2.new(0, 167, 0, 23)
+ANIMATION.Font = Enum.Font.SourceSans
+ANIMATION.Text = "Animation"
+ANIMATION.TextColor3 = Color3.fromRGB(255, 255, 255)
+ANIMATION.TextSize = 20.000
+
+NINJA.Name = "NINJA"
+NINJA.Parent = Main
+NINJA.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NINJA.Position = UDim2.new(0.142011836, 0, 0.295154184, 0)
+NINJA.Size = UDim2.new(0, 71, 0, 27)
+NINJA.Font = Enum.Font.SourceSans
+NINJA.Text = "Ninja"
+NINJA.TextColor3 = Color3.fromRGB(255, 255, 255)
+NINJA.TextSize = 14.000
+NINJA.MouseButton1Down:Connect(function()
+	while true do
+		local Animate = game.Players.LocalPlayer.Character.Animate
+		Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=656117400"
+		Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=656118341"
+		Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=656121766"
+		Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=656118852"
+		Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
+		Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=656114359"
+		Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+		game.Players.LocalPlayer.Character.Humanoid.Jump = false
+		wait(1)
+	end
+end)
+
+HEADLESS.Name = "HEADLESS"
+HEADLESS.Parent = Main
+HEADLESS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HEADLESS.Position = UDim2.new(0, 0, 0.50220263, 0)
+HEADLESS.Size = UDim2.new(0, 167, 0, 23)
+HEADLESS.Font = Enum.Font.SourceSans
+HEADLESS.Text = "Headless"
+HEADLESS.TextColor3 = Color3.fromRGB(255, 255, 255)
+HEADLESS.TextSize = 20.000
+
+HEADLESSBUTTON.Name = "HEADLESSBUTTON"
+HEADLESSBUTTON.Parent = Main
+HEADLESSBUTTON.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HEADLESSBUTTON.Position = UDim2.new(0.142011836, 0, 0.744493365, 0)
+HEADLESSBUTTON.Size = UDim2.new(0, 71, 0, 27)
+HEADLESSBUTTON.Font = Enum.Font.SourceSans
+HEADLESSBUTTON.Text = "Headless"
+HEADLESSBUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+HEADLESSBUTTON.TextSize = 14.000
+HEADLESSBUTTON.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.Transparency = 1
+	for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+		if (v:IsA("Decal")) then
+			v:Destroy()
+		end
+	end
+end)
+
+SCRIPTS.Name = "SCRIPTS"
+SCRIPTS.Parent = Main
+SCRIPTS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SCRIPTS.Position = UDim2.new(0.505917132, 0, 0.105726875, 0)
+SCRIPTS.Size = UDim2.new(0, 167, 0, 23)
+SCRIPTS.Font = Enum.Font.SourceSans
+SCRIPTS.Text = "Scripts"
+SCRIPTS.TextColor3 = Color3.fromRGB(255, 255, 255)
+SCRIPTS.TextSize = 20.000
+
+SAZAHUB.Name = "SAZAHUB"
+SAZAHUB.Parent = Main
+SAZAHUB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SAZAHUB.Position = UDim2.new(0.612426043, 0, 0.251101315, 0)
+SAZAHUB.Size = UDim2.new(0, 99, 0, 21)
+SAZAHUB.Font = Enum.Font.SourceSans
+SAZAHUB.Text = "SazaHub"
+SAZAHUB.TextColor3 = Color3.fromRGB(255, 255, 255)
+SAZAHUB.TextSize = 14.000
+SAZAHUB.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet"https://scriptblox.com/raw/SAZA-HUB_496")()
+end)
+
+BLACKSTRAP.Name = "BLACKSTRAP"
+BLACKSTRAP.Parent = Main
+BLACKSTRAP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BLACKSTRAP.Position = UDim2.new(0.612426043, 0, 0.409691632, 0)
+BLACKSTRAP.Size = UDim2.new(0, 99, 0, 21)
+BLACKSTRAP.Font = Enum.Font.SourceSansBold
+BLACKSTRAP.Text = "BlacksTrap"
+BLACKSTRAP.TextColor3 = Color3.fromRGB(255, 255, 255)
+BLACKSTRAP.TextSize = 14.000
+BLACKSTRAP.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
+end)
+
+RSPY.Name = "RSPY"
+RSPY.Parent = Main
+RSPY.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RSPY.Position = UDim2.new(0.612426043, 0, 0.555066109, 0)
+RSPY.Size = UDim2.new(0, 99, 0, 21)
+RSPY.Font = Enum.Font.SourceSans
+RSPY.Text = "Remote Spy"
+RSPY.TextColor3 = Color3.fromRGB(255, 255, 255)
+RSPY.TextSize = 14.000
+RSPY.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua"))()
+end)
+
+FAKEHATCHER.Name = "FAKEHATCHER"
+FAKEHATCHER.Parent = Main
+FAKEHATCHER.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FAKEHATCHER.Position = UDim2.new(0.612426043, 0, 0.700440526, 0)
+FAKEHATCHER.Size = UDim2.new(0, 99, 0, 21)
+FAKEHATCHER.Font = Enum.Font.SourceSans
+FAKEHATCHER.Text = "Fake Hatcher X"
+FAKEHATCHER.TextColor3 = Color3.fromRGB(255, 255, 255)
+FAKEHATCHER.TextSize = 14.000
+FAKEHATCHER.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/hackerDashDash/PetSimulatorX/main/PetSimulatorXV2.lua",true))()
+end)
+
+FAKEEQUIP.Name = "FAKEEQUIP"
+FAKEEQUIP.Parent = Main
+FAKEEQUIP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FAKEEQUIP.Position = UDim2.new(0.612426043, 0, 0.863436103, 0)
+FAKEEQUIP.Size = UDim2.new(0, 99, 0, 21)
+FAKEEQUIP.Font = Enum.Font.SourceSans
+FAKEEQUIP.Text = "Fake Equip X"
+FAKEEQUIP.TextColor3 = Color3.fromRGB(255, 255, 255)
+FAKEEQUIP.TextSize = 14.000
+FAKEEQUIP.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/hackerDashDash/PetSimulatorX/main/petSimulatorXEquipV2.lua",true))()
+end)
+
+open.Name = "open"
+open.Parent = ScreenGui
+open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+open.Position = UDim2.new(0.0827456415, 0, 0.430126965, 0)
+open.Size = UDim2.new(0, 31, 0, 33)
+open.Font = Enum.Font.SourceSans
+open.Text = "Open"
+open.TextColor3 = Color3.fromRGB(85, 255, 255)
+open.TextSize = 15.000
+
+-- Scripts:
+
+local function AQPE_fake_script() -- close.LocalScript 
+	local script = Instance.new('LocalScript', close)
+
+	local Main = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Main.Visible = false
+	end)
+end
+coroutine.wrap(AQPE_fake_script)()
+local function PDKS_fake_script() -- open.LocalScript 
+	local script = Instance.new('LocalScript', open)
+
+	local Main = script.Parent.Parent.Main
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Main.Visible = true
+	end)
+end
+coroutine.wrap(PDKS_fake_script)()
